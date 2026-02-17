@@ -1,0 +1,154 @@
+:root {
+  --bg: #0E0E0E;
+  --text: #F2F2F2;
+  --accent: #4C5F4C; /* change to muted red if preferred */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  text-align: center; /* GLOBAL CENTERING */
+}
+
+.hero {
+  height: 100vh;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.brand {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.microtext {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+.section {
+  padding: 8rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.narrow {
+  max-width: 700px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.stack p {
+  margin: 0.75rem 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  justify-items: center;
+}
+
+.mirror-list {
+  width: 100%;
+  max-width: 600px;
+}
+
+.mirror-list .pair {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 1rem;
+}
+
+/* Comparison Section Styling */
+.two-col h2 {
+  margin-bottom: 1.5rem;
+}
+
+.two-col > div:last-child h2 {
+  color: var(--accent); /* DISCIPLINED gets accent */
+}
+
+.two-col > div:last-child ul li {
+  color: var(--accent);
+}
+
+.framework .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  justify-items: center;
+}
+
+.framework h3 {
+  margin-bottom: 0.5rem;
+}
+
+.outline-btn {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.outline-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.pledge {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

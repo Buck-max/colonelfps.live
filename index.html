@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COLONELFPS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="hero">
+  <div class="brand">COLONELFPS</div>
+  <div class="hero-content">
+    <h1>COMPOSURE<br>OVER<br>CHAOS.</h1>
+    <p class="subtext">Mental discipline for competitive FPS players.</p>
+    <p class="microtext">Rank is not mechanical.<br>It is psychological.</p>
+  </div>
+</header>
+
+<section class="section narrow">
+  <h2>THE REAL REASON YOU LOSE</h2>
+  <p>
+    Most ranked games are not lost in aim duels.<br>
+    They are lost in moments of emotional instability.
+  </p>
+
+  <div class="stack">
+    <p>You swing too early.</p>
+    <p>You spray for confirmation.</p>
+    <p>You overpeek after damage.</p>
+    <p>You ego-challenge.</p>
+    <p>You tilt after one mistake.</p>
+  </div>
+
+  <p>
+    Mechanics expose mistakes.<br>
+    Emotion creates them.
+  </p>
+</section>
+
+<section class="section two-col">
+  <div>
+    <h2>PRESSURE DISTORTS DECISION-MAKING</h2>
+    <p>
+      Competitive games compress time.<br>
+      Information is incomplete.<br>
+      Adrenaline rises.
+    </p>
+
+    <p>Under pressure, most players default to instinct.</p>
+    <p>Instinct is rarely optimal.</p>
+  </div>
+
+  <div class="mirror-list">
+    <div class="pair"><span class="accent">PANIC</span><span>We remain composed.</span></div>
+    <div class="pair"><span class="accent">IMPATIENCE</span><span>We wait for advantage.</span></div>
+    <div class="pair"><span class="accent">EGO</span><span>We choose discipline over ego.</span></div>
+    <div class="pair"><span class="accent">TILT</span><span>We reset immediately.</span></div>
+    <div class="pair"><span class="accent">OVERCONFIDENCE</span><span>We respect the percentage play.</span></div>
+    <div class="pair"><span class="accent">HESITATION</span><span>We commit fully.</span></div>
+  </div>
+</section>
+
+<section class="section two-col">
+  <div>
+    <h2>AMATEUR</h2>
+    <ul>
+      <li>Plays for highlights</li>
+      <li>Chases dopamine</li>
+      <li>Blames teammates</li>
+      <li>Reviews nothing</li>
+      <li>Repeats mistakes</li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>DISCIPLINED</h2>
+    <ul>
+      <li>Plays percentages</li>
+      <li>Values survival</li>
+      <li>Reviews decisions</li>
+      <li>Tracks patterns</li>
+      <li>Improves deliberately</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section framework">
+  <h2>THE COMPOSURE FRAMEWORK</h2>
+  <div class="grid">
+    <div>
+      <h3>Emotional Regulation</h3>
+      <p>Control breathing. Slow perception. Stabilize response.</p>
+    </div>
+    <div>
+      <h3>Decision Quality</h3>
+      <p>Choose high-percentage fights. Avoid ego swings.</p>
+    </div>
+    <div>
+      <h3>Information Discipline</h3>
+      <p>Clear angles. Gather data. Don’t guess.</p>
+    </div>
+    <div>
+      <h3>Post-Game Review</h3>
+      <p>Detach ego. Audit mistakes. Adjust deliberately.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section pledge">
+  <p>Most players won’t live by this.</p>
+  <p>If you will—</p>
+
+  <button class="outline-btn" onclick="acceptStandard()">
+    I ACCEPT THE STANDARD
+  </button>
+
+  <p id="pledge-response" class="hidden">
+    Good.<br>Now play like it.
+  </p>
+</section>
+
+<script>
+function acceptStandard() {
+  const button = document.querySelector(".pledge .outline-btn");
+  const response = document.getElementById("pledge-response");
+
+  button.style.display = "none";
+  response.classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
