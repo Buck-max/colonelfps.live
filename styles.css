@@ -1,30 +1,37 @@
 :root {
   --bg: #0E0E0E;
-  --text: #F2F2F2;
-  --accent: #4C5F4C; /* change to muted red if preferred */
+  --text: #EDEDED;
+  --muted: #9A9A9A;
+  --accent: #4C5F4C; /* change to muted red if desired */
+  --divider: rgba(255,255,255,0.08);
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
-  text-align: center; /* GLOBAL CENTERING */
+  letter-spacing: 0.2px;
+  text-align: center;
 }
+
+/* ============================= */
+/* HERO */
+/* ============================= */
 
 .hero {
   height: 100vh;
-  padding: 2rem;
-  position: relative;
+  padding: 3rem 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .brand {
@@ -32,26 +39,32 @@ body {
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 0.85rem;
   letter-spacing: 2px;
-  font-size: 0.875rem;
+  opacity: 0.6;
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
   line-height: 1.05;
-  margin: 0;
 }
 
 .subtext {
-  font-size: 1.2rem;
   margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--muted);
 }
 
 .microtext {
-  font-size: 0.9rem;
-  opacity: 0.7;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
+
+/* ============================= */
+/* SECTIONS */
+/* ============================= */
 
 .section {
   padding: 8rem 2rem;
@@ -65,90 +78,133 @@ body {
 
 h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
 }
 
 .stack p {
-  margin: 0.75rem 0;
+  margin: 1rem 0;
 }
 
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  justify-items: center;
+/* ============================= */
+/* MIRROR TABLE */
+/* ============================= */
+
+.mirror-table {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.mirror-list {
-  width: 100%;
-  max-width: 600px;
-}
-
-.mirror-list .pair {
+.pair {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--divider);
+}
+
+.left {
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .accent {
   color: var(--accent);
-  font-weight: bold;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.right {
+  opacity: 0.9;
 }
 
-ul li {
+/* ============================= */
+/* COMPARISON TABLE */
+/* ============================= */
+
+.comparison-table {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comparison-table div {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--divider);
+}
+
+.col-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.disciplined {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ============================= */
+/* FRAMEWORK */
+/* ============================= */
+
+.framework-block {
+  margin-bottom: 4rem;
+}
+
+.framework-block h3 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
   margin-bottom: 1rem;
 }
 
-/* Comparison Section Styling */
-.two-col h2 {
+.framework-block p {
+  color: var(--muted);
+}
+
+/* ============================= */
+/* PLEDGE */
+/* ============================= */
+
+.pledge p {
   margin-bottom: 1.5rem;
 }
 
-.two-col > div:last-child h2 {
-  color: var(--accent); /* DISCIPLINED gets accent */
-}
-
-.two-col > div:last-child ul li {
-  color: var(--accent);
-}
-
-.framework .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  justify-items: center;
-}
-
-.framework h3 {
-  margin-bottom: 0.5rem;
-}
-
 .outline-btn {
-  margin-top: 2rem;
-  padding: 0.75rem 2rem;
+  padding: 1rem 3rem;
   background: transparent;
   border: 1px solid var(--text);
   color: var(--text);
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .outline-btn:hover {
   background: var(--accent);
   border-color: var(--accent);
-}
-
-.pledge {
-  text-align: center;
+  color: #fff;
 }
 
 .hidden {
   display: none;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .pair {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .comparison-table {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table div {
+    text-align: center;
+  }
 }
